@@ -44,6 +44,7 @@ const buscarOrg = async (req, res) => {
     }
 }
 
+
 const atualizarOrgPorId  =  async (req, res) => {
     try { 
         const { nome, tema, descricao, telefone, site } = req.body;
@@ -56,8 +57,7 @@ const atualizarOrgPorId  =  async (req, res) => {
         org.site = site || org.site
 
         const atualizarOrg = await org.save()
-        res.status(200).json({ message: "Organização atualidade com sucesso!",
-        org})
+        res.status(200).json({ message: "Organização atualizada com sucesso!"})
         
     } catch (error) {
         res.status(500).json({
@@ -87,4 +87,6 @@ module.exports  = {
     buscarOrg,
     atualizarOrgPorId,
     deletarOrgPorId
+    
+
 }
