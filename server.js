@@ -1,5 +1,5 @@
 const app = require("./src/app.js")
 const PORT = process.env.PORT
 
-app.listen(PORT, () => console.log(`Uhul Projeto Final!! Rodando na porta ${PORT}`))
+app.listen(PORT, () => console.log(`Projeto Final! Rodando na porta ${PORT}`))
  
